@@ -38,4 +38,3 @@ void main() {
     print(usuario['estudante']); // true
     print(usuario['escola']); // ITEL
 }
-
