@@ -25,7 +25,7 @@ class Contabancaria {
 
       void main() {
         Contabancaria c = Contabancaria('Renato',1000.0);
-        conta.mostrarSaldo();
-        conta.deposito(500.0);
-        conta.sacar(200.0);
+        c.mostrarSaldo();
+        c.deposito(500.0);
+        c.sacar(200.0);
       }
