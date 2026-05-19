@@ -6,7 +6,21 @@ class Contabancaria {
 
    void deposito(double valor) {
     saldo += valor;
-    print('Depósito de ${valor} realizado. Saldo atual: R\$ $saldo');
+    print('Depósito de ${valor} kzs realizado. Saldo atual: R\$ $saldo');
    }
 
+    void sacar(double valor) {
+      if(valor <= saldo) {
+        saldo -= valor;
+        print('Saque de ${valor} kzs realizado. Saldo atual: ${saldo} kzs');
+      } else {
+        print('Saldo insuficiente para realizar o saque de ${valor} kzs. Saldo atual: ${saldo} kzs');
+      }
+    }
+
+    void mostrarSaldo() {
+      print('Saldo atual de ${titular}: ${saldo} kzs');
+    }
 }
+
+      
