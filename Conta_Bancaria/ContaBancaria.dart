@@ -37,6 +37,27 @@ class Contabancaria {
 
          int opcao = 0;
 
+         while (opcao != 4){
+          print("========= Menu ========");
+          print("1- Depositar");
+          print("2- Sacar");
+          print("3- Ver Saldo");
+          print("4- sair");
+
+          print("Digite uma opção :");
+          opcao = int.parse(stdin.readLineSync()!);
+
+          switch (opcao){
+             case 1:
+             print("Digite o seu valor do deposito :");
+             double valor = double.parse(stdin.readLineSync()!);
+             conta.deposito(valor);
+
+             
+          }
+
+         }
+
          
 
       }
