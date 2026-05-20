@@ -49,11 +49,33 @@ class Contabancaria {
 
           switch (opcao){
              case 1:
-             print("Digite o seu valor do deposito :");
-             double valor = double.parse(stdin.readLineSync()!);
-             conta.deposito(valor);
+                    print("Digite o seu valor do deposito :");
+                    double valor = double.parse(stdin.readLineSync()!);
+                    conta.deposito(valor);
 
-             
+                  break;
+
+              case 2:
+
+                    print("Digite o valor do saque :");
+                    double valor = double.parse(stdin.readLineSync()!);
+                    conta.sacar(valor);
+
+                  break;
+
+              case 3:
+
+                    conta.mostrarSaldo();
+                  break;
+
+              case 4:
+
+                    print("Saindo do sistema...");
+                    break;
+
+              default:
+                    print("Opção Invalida!");                      
+
           }
 
          }
