@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Contabancaria {
   String titular;
   double saldo;
@@ -24,8 +26,17 @@ class Contabancaria {
 }
 
       void main() {
-        Contabancaria c = Contabancaria('Renato',1000.0);
-        c.mostrarSaldo();
-        c.deposito(500.0);
-        c.sacar(200.0);
+         print("======= Sistema Bancária =======");
+         print("Digite o seu nome: ");
+         String nome = stdin.readLineSync()!;
+
+         print("Digite o saldo inicial: ");
+         double saldoInicial = double.parse(stdin.readLineSync()!);
+
+         Contabancaria conta = Contabancaria(nome, saldoInicial);
+
+         int opcao = 0;
+
+         
+
       }
