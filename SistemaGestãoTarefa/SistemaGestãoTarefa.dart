@@ -2,15 +2,17 @@ import 'dart:io';
 void main(){
 
    List<String> tarefas = [];
+   int opcao = 0;
 
-     while (true) {
+     do {
           print("+++++++++++ Bem Vindo ++++++++++");
           print("1 - Adicionar");
           print("2 - Ver");
           print("3 - Editar");
           print("4 - Remover");
           print("0 - Sair");
-          int opcao = int.parse(stdin.readLineSync()!);
+          print("+++++++++++++++++++++++++++++++++");
+          opcao = int.parse(stdin.readLineSync()!);
 
           switch(opcao){
             case 1:
@@ -44,7 +46,7 @@ void main(){
                print("Digite o número da tarefa : ");
                int indece = int.parse(stdin.readLineSync()!);
 
-               tarefas.remove(indece - 1);  
+               tarefas.removeAt(indece - 1);  
                break;
 
             case 0:
@@ -59,11 +61,13 @@ void main(){
                 print("obrigado pelas ${feedbck} Estrelas");
               }
 
+
               default:
                print("Tente Novamente!");
+               break;
           }
 
 
-     }
+     }while (opcao != 0);
 
 }
