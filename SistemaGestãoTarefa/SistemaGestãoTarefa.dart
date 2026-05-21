@@ -25,7 +25,37 @@ void main(){
               }  
               break;
 
-           
+            case 3:
+              print("Digite o número da tarefa : ");
+              int indece = int.parse(stdin.readLineSync()!);
+              
+              print("Digite a nova tarefa : ");
+              String nova = stdin.readLineSync()!;
+
+              tarefas[indece - 1] = nova;
+
+              break;
+
+            case 4:
+               print("Digite o número da tarefa : ");
+               int indece = int.parse(stdin.readLineSync()!);
+
+               tarefas.remove(indece - 1);  
+               break;
+
+            case 0:
+               print("Obrigado por estares aqui!");
+               print("Quantas estrelas das ao sistema de 0 - 5 ??");
+               int feedbck = stdin.readLineSync()!;
+
+              if(feedbck < 2){
+                print("obrigado pela ${feedbck} Estrela");
+              }else{
+                print("obrigado pelas ${feedbck} Estrelas");
+              }
+          }
+
+
      }
 
 }
