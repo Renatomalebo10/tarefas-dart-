@@ -18,8 +18,14 @@ void main(){
               String tarefa = stdin.readLineSync()!;
               tarefas.add(tarefa);
               break;
-              
-          }
+
+            case 2:
+              for(int i = 0;i< tarefas.length ;i++){
+                    print("${i + 1} - ${tarefas[i]}");
+              }  
+              break;
+
+           
      }
 
 }
