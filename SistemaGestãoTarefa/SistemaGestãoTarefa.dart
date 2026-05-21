@@ -14,18 +14,21 @@ void main(){
 
           switch(opcao){
             case 1:
+              print("+++++++++ Adicionar +++++++++");
               print("Digite a tarefa : ");
               String tarefa = stdin.readLineSync()!;
               tarefas.add(tarefa);
               break;
 
             case 2:
+              print("+++++++++ Ver +++++++++");
               for(int i = 0;i< tarefas.length ;i++){
                     print("${i + 1} - ${tarefas[i]}");
               }  
               break;
 
             case 3:
+            print("+++++++++ Editar +++++++++");
               print("Digite o número da tarefa : ");
               int indece = int.parse(stdin.readLineSync()!);
               
@@ -37,6 +40,7 @@ void main(){
               break;
 
             case 4:
+               print("+++++++++ Remover +++++++++");
                print("Digite o número da tarefa : ");
                int indece = int.parse(stdin.readLineSync()!);
 
@@ -44,15 +48,19 @@ void main(){
                break;
 
             case 0:
+               print("+++++++++ Sair +++++++++");
                print("Obrigado por estares aqui!");
                print("Quantas estrelas das ao sistema de 0 - 5 ??");
-               int feedbck = stdin.readLineSync()!;
+               int feedbck = int.parse(stdin.readLineSync()!);
 
               if(feedbck < 2){
                 print("obrigado pela ${feedbck} Estrela");
               }else{
                 print("obrigado pelas ${feedbck} Estrelas");
               }
+
+              default:
+               print("Tente Novamente!");
           }
 
 
