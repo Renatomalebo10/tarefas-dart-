@@ -24,7 +24,16 @@ void main(){
             print("============================");
             break;
       
-      
+      case 2:
+            print("===========================");
+            print("Insere o valor em Metro");
+            double metro = double.parse(stdin.readLineSync()!);
+            double MetroParaCent(double metro){
+                return metro * 100;
+            }
+            print("${MetroParaCent(metro)} metros");
+            print("============================");
+            break;
 
     } 
      
