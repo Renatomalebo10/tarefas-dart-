@@ -31,9 +31,20 @@ void main(){
             double MetroParaCent(double metro){
                 return metro * 100;
             }
-            print("${MetroParaCent(metro)} metros");
+            print("${MetroParaCent(metro)} Cm");
             print("============================");
             break;
+
+       case 3:
+            print("===========================");
+            print("Insere o valor em Celsius");
+            double Celsius = double.parse(stdin.readLineSync()!);
+            double CelsiusParaF(double Celsius){
+                return (9 *Celsius / 5);
+            }
+            print("${CelsiusParaF(Celsius)} metros");
+            print("============================");
+            break;      
 
     } 
      
