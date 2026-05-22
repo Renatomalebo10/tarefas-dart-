@@ -44,7 +44,18 @@ void main(){
             }
             print("${CelsiusParaF(Celsius)} metros");
             print("============================");
-            break;      
+            break;     
+
+      case 4:
+            print("===========================");
+            print("Insere o valor em Kg");
+            double Kg = double.parse(stdin.readLineSync()!);
+            double KgParaGrama(double Kg){
+                return Kg * 1000;
+            }
+            print("${KgParaGrama(Kg)} metros");
+            print("============================");
+            break;         
 
     } 
      
