@@ -15,7 +15,7 @@ void main(){
     switch(opcao){
       case 1:
             print("===========================");
-            print("Insere o valor em Km");
+            print("Insere o valor em Km ✍🏽 : ");
             double km = double.parse(stdin.readLineSync()!);
             double kmParaMetro(double Km){
                 return Km * 1000;
@@ -26,7 +26,7 @@ void main(){
       
       case 2:
             print("===========================");
-            print("Insere o valor em Metro");
+            print("Insere o valor em Metro ✍🏽 : ");
             double metro = double.parse(stdin.readLineSync()!);
             double MetroParaCent(double metro){
                 return metro * 100;
@@ -37,25 +37,33 @@ void main(){
 
        case 3:
             print("===========================");
-            print("Insere o valor em Celsius");
+            print("Insere o valor em Celsius ✍🏽 : ");
             double Celsius = double.parse(stdin.readLineSync()!);
             double CelsiusParaF(double Celsius){
                 return (9 *Celsius / 5);
             }
-            print("${CelsiusParaF(Celsius)} metros");
+            print("${CelsiusParaF(Celsius)} Fahrenhrit");
             print("============================");
             break;     
 
       case 4:
             print("===========================");
-            print("Insere o valor em Kg");
+            print("Insere o valor em Kg ✍🏽 : ");
             double Kg = double.parse(stdin.readLineSync()!);
             double KgParaGrama(double Kg){
                 return Kg * 1000;
             }
-            print("${KgParaGrama(Kg)} metros");
+            print("${KgParaGrama(Kg)} gramas");
             print("============================");
-            break;         
+            break;   
+
+
+      case 0:
+          print("Volte sempre, Obrigado 🙏🙏");
+          break;
+
+      default:
+         print("opção Invalida, Tenta Novamente");               
 
     } 
      
