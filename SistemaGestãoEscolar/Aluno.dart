@@ -18,7 +18,7 @@ class Aluno {
      nome = stdin.readLineSync()!;
      print("Idade: ");
      idade = int.parse(stdin.readLineSync()!);
-     print("Medias Final: ");
+     print("Médias Final: ");
      NotaFinal = double.parse(stdin.readLineSync()!);
      print("Turma: ");
      turma = (stdin.readLineSync()!);
@@ -35,7 +35,7 @@ class Aluno {
          print("Id : ${aluno.id}");
          print("Nome : ${aluno.nome}");
          print("Idade : ${aluno.idade}");
-         print("Medías Final : ${aluno.NotaFinal}");
+         print("Médias Final : ${aluno.NotaFinal}");
          print("Turma : ${aluno.turma}");
          print("===============================");
     }
@@ -55,7 +55,7 @@ class Aluno {
             aluno.nome = stdin.readLineSync()!;
             print("Novo idade : ");
             aluno.idade = int.parse(stdin.readLineSync()!);
-            print("Nova Meías Final : ");
+            print("Nova Médias Final : ");
             aluno.NotaFinal = double.parse(stdin.readLineSync()!);
             print("Nova Turma : ");
             aluno.turma = stdin.readLineSync()!;
@@ -110,14 +110,50 @@ class Aluno {
             aluno.idade = int.parse(stdin.readLineSync()!);
             print("Nova Turma : ");
             aluno.turma = stdin.readLineSync()!;
-            print("Aprovado com a Medía : ${aluno.NotaFinal}");
+            print("Aprovado com a Média : ${aluno.NotaFinal}");
          }
       }
 
 }
+}
 
 void main(){
     Aluno a = Aluno(0,"", 0, 0.0, "A2");
-    a.cadastro();
-    a.listarAluno();
+    while(true){
+      print("======= Menu =======");
+      print("1 => Cadastrar Aluno");
+      print("2 => Listar os Aluno");
+      print("3 => Editar Aluno");
+      print("4 => Remover Aluno");
+      print("5 => ver média Aluno");
+      print("6 => Ver Aluno Aprovado");
+      print("0 => Sair");
+      int opcao = int.parse(stdin.readLineSync()!);
+      switch(opcao){
+        case 1:
+          a.cadastro();
+          break;
+        case 2:
+          a.listarAluno();
+          break;
+        case 3:
+          a.editar();
+          break;
+        case 4:
+          a.remover();
+          break;
+        case 5:
+          a.media();
+          break;
+        case 6:
+          a.aprovado();
+          break;
+        case 0:
+          print("Sair...");
+          break;
+
+        default:
+           print("Tente Novamente");    
+      }
+    }
 }
